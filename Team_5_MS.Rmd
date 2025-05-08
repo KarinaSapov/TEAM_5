@@ -65,9 +65,18 @@ install.packages("tidyverse")
 #Data assessment
 library("rpx")
 px <- PXDataset("PXD053636")
-f <- pxget(px, grep("mzid", pxfiles(px)))
 px
 pxfiles(px)
+pxget(px, grep("mzid", pxfiles(px)))
+pxget(px, grep("mzML", pxfiles(px)))
+f <- pxget(px, grep("mzid", pxfiles(px)))
+mzML <- pxget(px, grep("mzML", pxfiles(px)))
+pxurl(px)
+ident()
+proteomics()
+ident()
+quant()
+
 ```
 # PSM object from mzID files
 ```{r}
@@ -88,8 +97,8 @@ library(SpectraVis)
 library(mzR)
 library(parallel)
 
-basename(f)
-
-(sp <- Spectra(f))
+sp <- Spectra(mzML)
+sp
+obj <- PSM(f, spectrum = NA, peptide = NA, protein = NA, decoy = NA, rank = NA, score = NA, fdr = NA, parser = c("mzR", "mzID"), BPPARAM = SerialParam())
 
 ```
