@@ -86,10 +86,10 @@ library(cleaver)
 library(MSnbase)
 library(SpectraVis)
 library(mzR)
+library(parallel)
 
 basename(f)
 
-sp <- Spectra(f)
+(sp <- Spectra(f))
 
-Spectra(spd)
 ```
