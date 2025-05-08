@@ -1,6 +1,7 @@
 ---
 title: "Team_5"
 output: html_document
+author: "Karina Sapovalovaite, Swethaa Natraj Gayathri, Ankita Srivastava"
 date: "2025-05-08"
 ---
 
@@ -27,3 +28,8 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Import the data
+```{r}
+
+```
